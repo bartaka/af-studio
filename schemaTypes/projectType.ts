@@ -93,6 +93,12 @@ export const projectType = defineType({
             type: 'url',
             group: 'links',
             description: 'Full YouTube address'
+        }),
+        defineField({
+            name: 'orderRank',
+            type: 'string',
+            readOnly: true,
+            hidden: true
         })
     ],
     preview: {
