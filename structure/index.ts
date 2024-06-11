@@ -7,13 +7,17 @@ export const structure: StructureResolver = (S, context) =>
         .id('root')
         .title('Content')
         .items([
-            S.documentTypeListItem('banners').title('Banners').icon(ImageIcon),
+            orderableDocumentListDeskItem({
+                type: 'banners',
+                title: 'Banners',
+                icon: ImageIcon,
+                S,
+                context
+            }),
             orderableDocumentListDeskItem({
                 type: 'projects',
                 title: 'Projects',
                 icon: ProjectsIcon,
-                // Required if using multiple lists of the same 'type'
-                id: 'projects',
                 S,
                 context
             }),

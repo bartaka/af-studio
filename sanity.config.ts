@@ -30,6 +30,15 @@ export default defineConfig({
             orderRankField({ type: "project" })
           ],
         },
+        {
+          name: 'banner',
+          title: 'Banner',
+          type: 'document',
+          orderings: [orderRankOrdering],
+          fields: [
+            orderRankField({ type: 'banner' })
+          ]
+        }
       ]
     }
   }
