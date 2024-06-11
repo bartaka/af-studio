@@ -17,14 +17,14 @@ export const projectType = defineType({
             name: 'projectName',
             type: 'string',
             group: 'basicInfo',
-            validation: rule => rule.required()
+            validation: (rule) => rule.required()
         }),
         defineField({
             name: 'slug',
             type: 'slug',
             group: 'basicInfo',
             description: 'Pls just click "Generate"',
-            validation: rule => rule.required(),
+            validation: (rule) => rule.required(),
             options: { source: 'projectName' }
         }),
         defineField({
@@ -32,34 +32,35 @@ export const projectType = defineType({
             type: 'string',
             group: 'basicInfo',
             description: 'Film / Video Game / TV Series...',
-            validation: rule => rule.required()
+            validation: (rule) => rule.required()
         }),
         defineField({
-            name: 'yourRole',
+            name: 'role',
+            title: 'Your Role',
             type: 'string',
             group: 'basicInfo',
             description: 'Sound Design / Music Implementation / Voice Acting / Mix...',
-            validation: rule => rule.required()
+            validation: (rule) => rule.required()
         }),
         defineField({
             name: 'year',
             type: 'number',
             group: 'basicInfo',
-            validation: rule => rule.required()
+            validation: (rule) => rule.required()
         }),
         defineField({
             name: 'image',
             type: 'image',
             group: 'image',
             description: '386x216px, below 100 KB',
-            validation: rule => rule.required()
+            validation: (rule) => rule.required()
         }),
         defineField({
             name: 'imageAltText',
             type: 'string',
             group: 'image',
             description: 'A short description of the image. Or just copy the project name.',
-            validation: rule => rule.required()
+            validation: (rule) => rule.required()
         }),
         defineField({
             name: 'client',
@@ -69,9 +70,9 @@ export const projectType = defineType({
         defineField({
             name: 'website',
             type: 'url',
-            description: 'Pls input in full format: "https://website.com"',
+            description: 'Pls input in full format: "https://website.com/"',
             group: 'links',
-            validation: rule => rule.required()
+            validation: (rule) => rule.required()
         }),
         defineField({
             name: 'note',
@@ -84,7 +85,7 @@ export const projectType = defineType({
             name: 'description',
             type: 'array',
             group: 'basicInfo',
-            validation: rule => rule.required(),
+            validation: (rule) => rule.required(),
             of: [{ type: 'block' }]
         }),
         defineField({
