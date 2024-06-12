@@ -104,6 +104,7 @@ export const projectType = defineType({
     preview: {
         select: {
             title: 'projectName',
+            subtitle: 'year',
             media: 'image'
         }
     }

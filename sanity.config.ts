@@ -22,12 +22,12 @@ export default defineConfig({
       return [
         ...schemaTypes,
         {
-          name: "project",
-          title: "Project",
-          type: "document",
+          name: 'project',
+          title: 'Project',
+          type: 'document',
           orderings: [orderRankOrdering],
           fields: [
-            orderRankField({ type: "project" })
+            orderRankField({ type: 'project' })
           ],
         },
         {
